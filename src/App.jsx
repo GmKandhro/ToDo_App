@@ -1,7 +1,7 @@
 // App.js
 import { useEffect, useState } from "react";
 import TaskList from "./components/TaskList";
-
+import "./index.css"
 function App() {
   const [tasks, setTasks] = useState([]);
   const [taskInput, setTaskInput] = useState("");
@@ -55,7 +55,7 @@ useEffect(() => {
    <> 
    {/* <Navbar/> */}
    <div className="min-h-screen bg-gray-300 flex flex-col justify-center items-center">
-      <div className="bg-white p-4 rounded-lg shadow-md w-96">
+      <div className="bg-white p-4 rounded-lg shadow-md w-96 overflow-y-scroll max-h-[250px] box">
         <h1 className="text-2xl font-semibold mb-4">Todo App</h1>
         <div className="flex items-center space-x-2 mb-4">
           <input
